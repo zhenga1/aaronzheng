@@ -1,0 +1,372 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f5f5f5; /* Light gray for contrast */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Header */
+.main-header {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(120deg, #1e1e2f, #444); /* Subtle gradient */
+    color: #fff;
+}
+
+.main-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.main-header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.bookmark-bar ul {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 20px;
+}
+
+.bookmark-bar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.bookmark-bar ul li a:hover {
+    color: #ffcc00; /* Gold accent */
+}
+
+/* Section Styles */
+.section {
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #1e1e2f; /* Professional dark navy */
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #ffcc00; /* Gold underline */
+    margin: 10px auto;
+}
+
+.section p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Portfolio Section */
+.section {
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.section-alt {
+    background: #f8f8f8; /* Subtle gray background */
+}
+
+.portfolio-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 900px;
+    text-align: left; /* Align items left for a professional layout */
+}
+
+.project-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 15px 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s ease;
+}
+
+.project-item:hover {
+    background: #e9ecef; /* Light hover effect */
+}
+
+.project-item .icon {
+    font-size: 2rem;
+    color: #1e88e5; /* Blue icon color */
+    flex-shrink: 0;
+}
+
+.project-item .details {
+    flex: 1;
+}
+
+.project-item a {
+    text-decoration: none;
+    color: #1e1e2f;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-item a:hover {
+    color: #ffcc00; /* Gold hover effect */
+}
+
+.project-item p {
+    margin: 5px 0 0;
+    color: #555; /* Neutral gray text */
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+/* Profile Photo and Text Layout */
+.with-photo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Makes the photo circular */
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.text-content {
+    flex: 1;
+}
+
+/* Alternate Section */
+.section-alt {
+    background: #f8f8f8; /* Slightly gray background for contrast */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1e1e2f;
+    color: #fff;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+/* Connect with Me Section */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #1e1e2f; /* Professional dark navy */
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    color: #ffcc00; /* Gold hover effect */
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+.social-link img {
+    width: 32px; /* Icon size */
+    height: 32px;
+    margin-right: 10px;
+    object-fit: contain;
+}
+
+/* Photo Info Section */
+.photo_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Centers text within the column */
+    gap: 15px; /* Space between elements */
+    margin-top: 20px;
+}
+
+.profile-photo {
+    width: 150px; /* Adjust photo size */
+    height: 150px;
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure it scales properly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+}
+
+.social-links {
+    display: flex;
+    justify-content: center; /* Center align links */
+    gap: 20px; /* Space between icons */
+}
+
+.social-link img {
+    width: 32px; /* Icon size */
+    height: 32px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.social-link img:hover {
+    transform: scale(1.2); /* Slight enlargement on hover */
+    filter: brightness(1.2); /* Brighten the icon */
+}
+/* Experience Section */
+.experience-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.experience-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background: #fff; /* White background for contrast */
+    border: 1px solid #ddd; /* Subtle border for boxing */
+    border-radius: 10px; /* Rounded corners */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    position: relative;
+}
+
+.experience-item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+    transform: translateY(-5px); /* Slight lift on hover */
+}
+
+.year {
+    flex-shrink: 0;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #1e1e2f; /* Dark navy for professionalism */
+    background: #f8f8f8; /* Light gray for contrast */
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for emphasis */
+}
+
+.details {
+    flex: 1;
+}
+
+.details h3 {
+    margin: 0 0 10px;
+    font-size: 1.3em;
+    color: #1e88e5; /* Blue for job title */
+}
+
+.details p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #555; /* Neutral gray for readability */
+}
+
+.details::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -10px;
+    width: 10px;
+    height: 10px;
+    background: #1e1e2f; /* Dark navy dot */
+    border-radius: 50%;
+}
+
+/* Academic Section */
+.academic-list {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin-top: 20px;
+}
+
+.academic-list li {
+    margin-bottom: 15px; /* Space between list items */
+}
+
+.academic-list a {
+    display: inline-block; /* Makes the link a clickable block */
+    text-decoration: none;
+    color: #1e88e5; /* Professional blue link color */
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.academic-list a:hover {
+    color: #1565c0; /* Darker blue on hover */
+    transform: scale(1.1); /* Slight right movement on hover */
+}
+
+/* Additional Section */
+.horizontal-items {
+    display: flex;
+    gap: 20px; /* Space between items */
+    margin-top: 20px;
+}
+
+.horizontal-items .item {
+    flex: 1; /* Make both items take up equal width */
+    padding: 20px;
+    background: #fff; /* White background for contrast */
+    border: 1px solid #ddd; /* Subtle border for separation */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+}
+
+.horizontal-items .item:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.horizontal-items h4 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #1e88e5; /* Blue for item headings */
+}
+
+.horizontal-items p {
+    font-size: 1em;
+    color: #555; /* Neutral gray for text */
+    line-height: 1.6;
+}
+
+

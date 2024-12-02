@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header id="home" class="main-header">
+        <div class="container">
+            <h1>Aaron Zheng</h1>
+            <p>EECS | UC Berkeley
+            </p>
+            <nav class="bookmark-bar">
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#academic">Academics</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#resume">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container with-photo">
+            <div class="photo_info">
+                <img src="my_photo.png" alt="Your Photo" class="profile-photo">
+                <div class="social-link">
+                    <a href="https://www.linkedin.com/in/aaronhzheng/" target="_blank" class="social-link">
+                        <img src="assets/icons/linkedin_icon.png" alt="LinkedIn Icon">
+                        
+                    </a>
+                    <a href="https://github.com/zhenga1" target="_blank" class="social-link">
+                        <img src="assets/icons/github_icon.png" alt="GitHub Icon">
+                        
+                    </a>
+                    <a href="mailto:aaronz@berkeley.edu" class="social-link">
+                        <img src="assets/icons/email_icon.png" alt="Email Icon">
+                        
+                    </a>
+                </div>
+             </div>
+            <div class="text-content">
+                <h2>About Me</h2>
+                <p>
+                    I am an Artificial Intelligence Intern at Uniphore and a student at UC Berkeley studying Electrical Engineering and Computer Science.  My work as an intern
+                    focuses on building innovative safety models for enterprise AI models, ensuring that they do not output toxic / offensive content. 
+                    <br/><br/>
+                    With experience in LLMs, robotics, and computer graphics, I worked on projects ranging from contributing to JIPCAD, an open-source procedural
+                    3D-CAD project, building a cellular automata like video game for my computer graphics final project, and research in the field of robotics and AI. 
+                    <br/><br/>
+                    My mission is to build <b>safe and efficient AI across modalities (motion, language), for the betterment of humanity.</b> 
+                    <br/><br/>
+                    In my spare time, you are most likely to find me <b>in the gym</b>, <b>rock climbing</b>, or <b>playing the piano</b>.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section section-alt">
+        <div class="container">
+            <div class="text-content">
+                <h2>Portfolio</h2>
+                <p>Here are some of my recent projects:</p>
+                <ul class="portfolio-list">
+                    <li>
+                        <div class="project-item">
+                            <div class="icon">&#128187;</div>
+                            <div class="details">
+                                <a href="https://arxiv.org/abs/2411.14398" target="_blank">
+                                    <strong>AI Guardrails Innovation:</strong>
+                                </a>
+                                <p>
+                                    Developed a method of creating AI Safety Guardrails that reduced latency by 99% without sacrificing performance. 
+                                    Tested on an open-sourced safety dataset. Published at COLING 2025.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="project-item">
+                            <div class="icon">&#127918;</div>
+                            <div class="details">
+                                <a href="https://sylviacx.github.io/cs184-final-project/FinalReport/index.html" target="_blank">
+                                    <strong>Cellular Automata Video Game Building:</strong>
+                                </a>
+                                <p>
+                                    Developed a cellular automata-based video game system (like Minecraft) for my computer graphics class project at Berkeley.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="project-item">
+                            <img src="assets/icons/jipcad_icon.png" alt="CAD Icon" class="icon">
+                        
+                            <div class="details">
+                                <a href="https://github.com/JIPCAD/JIPCAD" target="_blank">
+                                    <strong>Contributions to NOME / JIPCAD:</strong>
+                                </a>
+                                <p>
+                                    Created a custom VSCode extension for the NOME programming language. Designed knot structures and implemented shelling, merging, offsetting, and color-changing features for this open-sourced 3D-CAD software.
+                                </p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <p>Here are some customized tools I built:</p>
+                <div class="horizontal-items">
+                    <div class="item">
+                        <a href="https://zhenga1.github.io/gesturedetectorweb/" target="_blank" style="text-decoration: none;">
+                        <h4>Gesture Detector</h4>
+                        <p>
+                            A Handpose Detector made using tensorflow, with react as the frontend. Will detect and show the relevant handpose done by the user through an emoji format.
+                        </p>
+                        </a>
+                    </div>
+                    <div class="item">
+                        <a href="https://github.com/zhenga1/writeeasy" target="_blank" style="text-decoration: none;">
+                        <h4>Write Easy</h4>
+                        <p>
+                            A Flask web app made using Cohere and python as backend that generates paragraphs of text, saving college student's time by helping them write application essays.
+                        </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+   <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <h2>Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item">
+                    <div class="year">2024</div>
+                    <div class="details">
+                        <h3>AI Intern</h3>
+                        <p><strong>Uniphore</strong></p>
+                        <p>
+                            Developed AI safety methodologies, including novel guardrail models. 
+                            <br/>
+                            Developed versatile topic classifiers. 
+                        </p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="year">2023 - 2024</div>
+                    <div class="details">
+                        <h3>Peer Leadership Consultant</h3>
+                        <p><strong>UC Berkeley Organizational Advising Student Involvement Services</strong></p>
+                        <p>
+                            Processed official registration of student orgs and their signatories on campus. 
+                            <br/>
+                            Front desk staffing to answer questions from student orgs.
+                            <br/>
+                            Worked on designing new training website for signatories with colleagues.
+                        </p>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="year">2023</div>
+                    <div class="details">
+                        <h3>Language Engineering Intern</h3>
+                        <p><strong>Ivoyant</strong></p>
+                        <p>
+                            Built and debugged parser and language models to analyze JSON files with user data. 
+                            <br/>
+                            Developed functionalities for data mapping app, allowing it to map source and target schemas based on parsed user-input expressions
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Academic Section -->
+    <section id="academic" class="section section-alt">
+        <div class="container">
+            <h2>Academics</h2>
+            <ul class="academic-list">
+                <li>
+                    <a href="https://zhenga1.github.io/" target="_blank">
+                        Computer Vision
+                    </a>
+                </li>
+                <li>
+                    <a href="https://sylviacx.github.io/cs184-final-project/FinalReport/index.html" target="_blank">
+                        Computer Graphics
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+
+    <!-- Resume Section -->
+    <section id="resume" class="section ">
+        <div class="container">
+            <h2>Resume</h2>
+            <p>View or download my resume below:</p>
+            <div class="resume-links">
+                <a href="assets/resume.pdf" target="_blank" class="resume-btn">
+                    View Resume (PDF)
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>
+                Feel free to reach out to me via email at <a href="mailto:aaronz@berkeley.edu">aaronz@berkeley.edu</a> 
+                or connect with me on <a href="https://www.linkedin.com/in/aaronhzheng/">LinkedIn</a>.
+            </p>
+            <p> Please feel free to also check my <a href="https://aaronzheng.wiki/">old personal website</a>!: </p>
+        </div>
+    </section>
+    
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Aaron Zheng. All rights reserved.</p>
+    </footer>
+</body>
+</html>
