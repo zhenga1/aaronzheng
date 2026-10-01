@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Favorite Trails · Aaron Zheng</title>
+    <meta name="description" content="Bay Area hikes worth getting up early for.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <script>
+        try {
+            var t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+    </script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="../index.html" class="brand">
+                <span class="brand-mark">AZ</span>
+                <span class="brand-name">Aaron Zheng</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="../index.html#experience">Experience</a></li>
+                <li><a href="../index.html#academics">Academics</a></li>
+                <li><a href="../index.html#now">Now</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <span class="icon-sun">☀️</span><span class="icon-moon">🌙</span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="post container accent-green">
+        <a class="back-link" href="../index.html#now">← Back to Now &amp; Interests</a>
+
+        <header class="post-header">
+            <div class="post-emoji">🥾</div>
+            <p class="post-meta"><span class="status-dot"></span>Draft · Coming soon</p>
+            <h1>Favorite Trails</h1>
+            <p class="post-blurb">Bay Area hikes worth getting up early for.</p>
+            <div class="card-tags"><span>Hiking</span><span>Bay Area</span><span>Outdoors</span></div>
+        </header>
+
+        <article class="post-body">
+            <!-- TODO(aaron): write this post. Replace the "to be continued" block below with your content. -->
+            <div class="tbc">
+                <div class="tbc-lines" aria-hidden="true">
+                    <span style="width: 92%"></span>
+                    <span style="width: 78%"></span>
+                    <span style="width: 85%"></span>
+                    <span style="width: 54%"></span>
+                </div>
+                <p class="tbc-text">(to be continued)</p>
+                <p class="muted">This page is still being written. Check back soon — or <a href="mailto:aaronz@berkeley.edu">send me a note</a> if you want to chat about it in the meantime.</p>
+            </div>
+        </article>
+
+        <nav class="post-nav">
+            <a href="training.html" class="post-nav-link">
+                <span class="muted">← Previous</span>
+                <strong>🏋️ Training</strong>
+            </a>
+            <a href="playing.html" class="post-nav-link next">
+                <span class="muted">Next →</span>
+                <strong>🎮 Playing</strong>
+            </a>
+        </nav>
+    </main>
+
+    <footer class="footer container">
+        <p>© <span id="year">2026</span> Aaron Zheng · Built by hand, powered by tea.</p>
+        <div class="footer-links">
+            <a href="https://github.com/zhenga1" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/aaronhzheng/" target="_blank">LinkedIn</a>
+            <a href="mailto:aaronz@berkeley.edu">Email</a>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        document.getElementById('theme-toggle').addEventListener('click', function () {
+            var root = document.documentElement;
+            var current = root.getAttribute('data-theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            var next = current === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', next);
+            try { localStorage.setItem('theme', next); } catch (e) {}
+        });
+    </script>
+</body>
+</html>
