@@ -3,283 +3,370 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Website</title>
+    <title>Aaron Zheng</title>
+    <meta name="description" content="Aaron Zheng — EECS at UC Berkeley. Robotics, AI & LLMs, and computer graphics.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script>
+        // Apply saved theme before paint to avoid a flash
+        try {
+            var t = localStorage.getItem('theme');
+            if (t) document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+    </script>
 </head>
 <body>
-    <!-- Header Section -->
-    <header id="home" class="main-header">
-        <div class="container">
-            <h1>Aaron Zheng</h1>
-            <p>EECS | UC Berkeley
-            </p>
-            <nav class="bookmark-bar">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#academic">Academics</a></li>
-                </ul>
-            </nav>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="#home" class="brand">
+                <span class="brand-mark">AZ</span>
+                <span class="brand-name">Aaron Zheng</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#academics">Academics</a></li>
+                <li><a href="#now">Now</a></li>
+            </ul>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                <span class="icon-sun">☀️</span><span class="icon-moon">🌙</span>
+            </button>
         </div>
-    </header>
+    </nav>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container with-photo">
-            <div class="photo_info">
-                <img src="my_photo.png" alt="Your Photo" class="profile-photo">
-                <div class="social-link">
-                    <a href="https://www.linkedin.com/in/aaronhzheng/" target="_blank" class="social-link">
-                        <img src="assets/icons/linkedin_icon.png" alt="LinkedIn Icon">
-                        
+    <main>
+        <!-- Hero -->
+        <header id="home" class="hero container">
+            <div class="hero-text">
+                <p class="eyebrow">Hey, I'm Aaron 👋</p>
+                <h1>I build robots, train models, and make <span class="gradient-text">pixels move</span>.</h1>
+                <p class="lead">
+                    I'm an EECS student at UC Berkeley working at the intersection of
+                    <span class="tag tag-pink">robotics</span>
+                    <span class="tag tag-blue">AI &amp; LLMs</span> and
+                    <span class="tag tag-green">computer graphics</span>.
+                    Currently a software engineer on autonomy behavior evaluation at Nuro.
+                </p>
+                <p class="lead muted">
+                    Off the keyboard, you'll find me at the gym, playing video games, or out on a hike.
+                </p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="mailto:aaronz@berkeley.edu">Say hello</a>
+                    <a class="btn btn-ghost" href="assets/resume.pdf" target="_blank">Résumé ↗</a>
+                    <a class="btn btn-ghost" href="https://calendly.com/aaronhaowenzheng/new-meeting" target="_blank">Grab tea ☕</a>
+                </div>
+                <div class="socials">
+                    <a href="https://github.com/zhenga1" target="_blank" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.27 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+                        <span>GitHub</span>
                     </a>
-                    <a href="https://github.com/zhenga1" target="_blank" class="social-link">
-                        <img src="assets/icons/github_icon.png" alt="GitHub Icon">
-                        
+                    <a href="https://www.linkedin.com/in/aaronhzheng/" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+                        <span>LinkedIn</span>
                     </a>
-                    <a href="mailto:aaronz@berkeley.edu" class="social-link">
-                        <img src="assets/icons/email_icon.png" alt="Email Icon">
-                        
+                    <a href="mailto:aaronz@berkeley.edu" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></svg>
+                        <span>aaronz@berkeley.edu</span>
                     </a>
                 </div>
-             </div>
-            <div class="text-content">
-                <h2>About Me</h2>
-                <p>
-                    I am a student at UC Berkeley.  I am passionate about robotics, AI & LLMs, and computer graphics. 
-                    In my spare time, you are going to find me at the gym, playing video games or hiking. 
-                    <br/><br/>
-                    Drink tea and chat with me: <a href="https://calendly.com/aaronhaowenzheng/new-meeting" target="_blank">Schedule a meeting</a> (maybe not up to date but reach out!)
-                    <br/><br/>
-                    Email me at: <a href="mailto:aaronz@berkeley.edu">aaronz@berkeley.edu </a>
+            </div>
+            <div class="hero-photo">
+                <div class="photo-ring">
+                    <img src="my_photo.png" alt="Portrait of Aaron Zheng">
+                </div>
+                <div class="floating-chip chip-1">🦾 robotics</div>
+                <div class="floating-chip chip-2">🧠 LLMs</div>
+                <div class="floating-chip chip-3">🎮 graphics</div>
+            </div>
+        </header>
+
+        <!-- Projects -->
+        <section id="projects" class="section container">
+            <div class="section-head">
+                <h2><span class="section-num">01</span> Projects</h2>
+                <p class="muted">Things I've built, broken, and rebuilt.</p>
+            </div>
+            <div class="card-grid">
+                <article class="card accent-pink">
+                    <div class="card-icon">🦾</div>
+                    <h3><a href="https://github.com/zhenga1/OpenGym-Copilot" target="_blank">OpenGym Copilot</a></h3>
+                    <p>A reward-tuning copilot for MuJoCo and OpenAI Gym environments. Plug in your own backend APIs and have fun tuning! Currently a prototype.</p>
+                    <div class="card-tags"><span>RL</span><span>MuJoCo</span><span>LLMs</span></div>
+                    <div class="card-links">
+                        <a href="https://opengym-copilot.onrender.com/" target="_blank">Live demo ↗</a>
+                        <a href="https://github.com/zhenga1/OpenGym-Copilot" target="_blank">Code ↗</a>
+                    </div>
+                </article>
+                <article class="card accent-blue">
+                    <div class="card-icon">🥽</div>
+                    <h3><a href="https://zhenga1.github.io/vr-teleop-robotics/" target="_blank">Quest 3 → UR7e Teleop</a></h3>
+                    <p>Led the creation of a real-time teleoperation and replay system for the UR7e robot arm, driven by a Quest 3 VR headset.</p>
+                    <div class="card-tags"><span>VR</span><span>Robotics</span><span>Teleop</span></div>
+                    <div class="card-links">
+                        <a href="https://zhenga1.github.io/vr-teleop-robotics/" target="_blank">Project page ↗</a>
+                    </div>
+                </article>
+                <article class="card accent-orange">
+                    <div class="card-icon">🤸</div>
+                    <h3><a href="https://tinyurl.com/dxxz5zzj" target="_blank">IsaacSim Somersault</a></h3>
+                    <p>Simulations in Isaac Sim teaching a Unitree humanoid robot to do somersaults.</p>
+                    <div class="card-tags"><span>Isaac Sim</span><span>Humanoids</span></div>
+                    <div class="card-links">
+                        <a href="https://tinyurl.com/dxxz5zzj" target="_blank">Watch ↗</a>
+                    </div>
+                </article>
+                <article class="card accent-violet">
+                    <div class="card-icon">🛡️</div>
+                    <h3><a href="https://arxiv.org/abs/2411.14398" target="_blank">Low-Latency AI Guardrails</a></h3>
+                    <p>A method for building AI safety guardrails that cut latency by 99% without sacrificing performance, tested on an open-source safety dataset.</p>
+                    <div class="card-tags"><span>AI Safety</span><span>COLING 2025</span></div>
+                    <div class="card-links">
+                        <a href="https://arxiv.org/abs/2411.14398" target="_blank">Paper ↗</a>
+                    </div>
+                </article>
+                <article class="card accent-green">
+                    <div class="card-icon">🎮</div>
+                    <h3><a href="https://sylviacx.github.io/cs184-final-project/FinalReport/index.html" target="_blank">Cellular Automata Game</a></h3>
+                    <p>A cellular-automata-based voxel game system (think Minecraft) built for Berkeley's computer graphics course.</p>
+                    <div class="card-tags"><span>Graphics</span><span>CS 184</span></div>
+                    <div class="card-links">
+                        <a href="https://zhenga1.github.io/Cellular-Automata-Game-Serving/" target="_blank">Play it ↗</a>
+                        <a href="https://sylviacx.github.io/cs184-final-project/FinalReport/index.html" target="_blank">Report ↗</a>
+                    </div>
+                </article>
+                <article class="card accent-teal">
+                    <div class="card-icon"><img src="assets/icons/jipcad_icon.png" alt=""></div>
+                    <h3><a href="https://github.com/JIPCAD/JIPCAD" target="_blank">NOME / JIPCAD</a></h3>
+                    <p>Built a VSCode extension for the NOME language, designed knot structures, and implemented shelling, merging, offsetting, and color-changing in this open-source 3D CAD tool.</p>
+                    <div class="card-tags"><span>CAD</span><span>Open source</span></div>
+                    <div class="card-links">
+                        <a href="https://github.com/JIPCAD/JIPCAD" target="_blank">Code ↗</a>
+                    </div>
+                </article>
+            </div>
+
+            <h3 class="subhead">Little tools</h3>
+            <div class="mini-grid">
+                <a class="mini-card" href="https://zhenga1.github.io/gesturedetectorweb/" target="_blank">
+                    <span class="mini-emoji">✋</span>
+                    <div>
+                        <h4>Gesture Detector ↗</h4>
+                        <p>Hand-pose detection with TensorFlow and React that mirrors your gesture back as an emoji.</p>
+                    </div>
+                </a>
+                <a class="mini-card" href="https://github.com/zhenga1/writeeasy" target="_blank">
+                    <span class="mini-emoji">✍️</span>
+                    <div>
+                        <h4>Write Easy ↗</h4>
+                        <p>A Flask + Cohere app that drafts paragraphs to help students with application essays.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="section container">
+            <div class="section-head">
+                <h2><span class="section-num">02</span> Experience</h2>
+                <p class="muted">Where I've been spending my days.</p>
+            </div>
+            <ol class="timeline">
+                <li class="tl-item" style="--dot: var(--pink)">
+                    <div class="tl-date">2026</div>
+                    <div class="tl-body">
+                        <h3>Software Engineer, Autonomy — Behavior Evaluation</h3>
+                        <p class="tl-org">Nuro</p>
+                        <ul>
+                            <li>Building data cleaning, preprocessing, and analysis pipelines.</li>
+                            <li>Productionizing model-based approaches for evaluating autonomous vehicle behavior.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="tl-item" style="--dot: var(--blue)">
+                    <div class="tl-date">2025 – 2026</div>
+                    <div class="tl-body">
+                        <h3>Researcher</h3>
+                        <p class="tl-org">Berkeley Sky Computing Lab · SkyRL</p>
+                        <ul>
+                            <li>Built tooling to merge sharded FSDP model tensors in each RL training checkpoint into a single <code>.safetensors</code> file.</li>
+                            <li>Integrated SkyRL-train into rLLM as a supported backend trainer through a new API.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="tl-item" style="--dot: var(--violet)">
+                    <div class="tl-date">2024 – 2025</div>
+                    <div class="tl-body">
+                        <h3>AI Scientist</h3>
+                        <p class="tl-org">Uniphore</p>
+                        <ul>
+                            <li>Developed AI safety methodologies, including novel guardrail models.</li>
+                            <li>Developed versatile topic classifiers.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="tl-item" style="--dot: var(--orange)">
+                    <div class="tl-date">2023 – 2024</div>
+                    <div class="tl-body">
+                        <h3>Peer Leadership Consultant</h3>
+                        <p class="tl-org">UC Berkeley · Organizational Advising &amp; Student Involvement Services</p>
+                        <ul>
+                            <li>Processed official registration of student orgs and their signatories.</li>
+                            <li>Staffed the front desk answering questions from student orgs.</li>
+                            <li>Helped design a new training website for signatories.</li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="tl-item" style="--dot: var(--green)">
+                    <div class="tl-date">2023</div>
+                    <div class="tl-body">
+                        <h3>Language Engineering Intern</h3>
+                        <p class="tl-org">Ivoyant</p>
+                        <ul>
+                            <li>Built and debugged parsers and language models to analyze JSON files of user data.</li>
+                            <li>Built a data-mapping app feature that maps source to target schemas from parsed user-input expressions.</li>
+                        </ul>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Academics -->
+        <section id="academics" class="section container">
+            <div class="section-head">
+                <h2><span class="section-num">03</span> Academics &amp; Writing</h2>
+                <p class="muted">Papers and course projects I'm proud of.</p>
+            </div>
+            <div class="list-block">
+                <h3 class="subhead">Publications</h3>
+                <ul class="post-list">
+                    <li>
+                        <a href="https://arxiv.org/abs/2411.14398" target="_blank">Low-latency AI safety guardrails</a>
+                        <span class="pill pill-violet">COLING 2025</span>
+                    </li>
+                    <!-- TODO(aaron): add the "Continuity of Mind" paper here
+                         (assets/7835_Continuity_of_Mind_Ground.pdf). -->
+                </ul>
+            </div>
+            <div class="list-block">
+                <h3 class="subhead">Course projects</h3>
+                <ul class="post-list">
+                    <li>
+                        <a href="assets/UCB_CS182_Report.pdf" target="_blank">Deep Neural Networks</a>
+                        <span class="pill pill-blue">CS 182</span>
+                    </li>
+                    <li>
+                        <a href="assets/EECS_151_Project_Report_Final (1).pdf" target="_blank">Digital Design &amp; Integrated Circuits</a>
+                        <span class="pill pill-orange">EECS 151</span>
+                    </li>
+                    <li>
+                        <a href="https://zhenga1.github.io/" target="_blank">Computer Vision</a>
+                        <span class="pill pill-green">CV</span>
+                    </li>
+                    <li>
+                        <a href="https://sylviacx.github.io/cs184-final-project/FinalReport/index.html" target="_blank">Computer Graphics</a>
+                        <span class="pill pill-pink">CS 184</span>
+                    </li>
+                    <li>
+                        <a href="assets/EMNLP_2025_Paper.pdf" target="_blank">LLM Agents</a>
+                        <span class="pill pill-violet">Paper</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Now / Interests (TODO section) -->
+        <section id="now" class="section container">
+            <div class="section-head">
+                <h2><span class="section-num">04</span> Now &amp; Interests</h2>
+                <p class="muted">
+                    What I'm into these days.
+                    <span class="todo-badge">TODO: fill me in</span>
                 </p>
             </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section section-alt">
-        <div class="container">
-            <div class="text-content">
-                <h2>Portfolio</h2>
-                <p>Here are some of my recent projects:</p>
-                <ul class="portfolio-list">
-                    <li>
-                        <div class="project-item">
-                            <div class="icon">🦾</div>
-                            <div class="details">
-                                <a href="https://github.com/zhenga1/OpenGym-Copilot" target="_blank">
-                                    <strong>OpenGym Copilot </strong>
-                                </a>
-                                <p>
-                                    Built a Reward-Tuning Copilot on Mujoco and OpenAI Gym environments. Plug in your own backend APIs and have fun tuning!
-                                    In prototype stage. 
-                                </p>
-                                <a href="https://opengym-copilot.onrender.com/" target="_blank" rel="noopener noreferrer">
-                                <p>Check it out!</p>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="project-item">
-                            <div class="icon">🥽</div>
-                            <div class="details">
-                                <a href="https://zhenga1.github.io/vr-teleop-robotics/" target="_blank">
-                                    <strong>Quest 3 to UR7e Teleop</strong>
-                                </a>
-                                <p>
-                                    Led creation of realtime teleoperation and replay system for the UR7e robot arm using the Quest 3 VR headset.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="project-item">
-                            <div class="icon">🤸</div>
-                            <div class="details">
-                                <a href="https://tinyurl.com/dxxz5zzj" target="_blank">
-                                    <strong>IsaacSim Somersault</strong>
-                                </a>
-                                <p>
-                                    Created simulations on IsaacSim for somersaulting of a Unitree Humanoid Robot. 
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="project-item">
-                            <div class="icon">&#128187;</div>
-                            <div class="details">
-                                <a href="https://arxiv.org/abs/2411.14398" target="_blank">
-                                    <strong>AI Guardrails Innovation:</strong>
-                                </a>
-                                <p>
-                                    Developed a method of creating AI Safety Guardrails that reduced latency by 99% without sacrificing performance. 
-                                    Tested on an open-sourced safety dataset. Published at COLING 2025.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="project-item">
-                            <div class="icon">&#127918;</div>
-                            <div class="details">
-                                <a href="https://sylviacx.github.io/cs184-final-project/FinalReport/index.html" target="_blank">
-                                    <strong>Cellular Automata Video Game Building:</strong>
-                                </a>
-                                <p>
-                                    Developed a cellular automata-based video game system (like Minecraft) for my computer graphics class project at Berkeley.
-                                </p>
-                                <a href="https://zhenga1.github.io/Cellular-Automata-Game-Serving/" target="_blank" rel="noopener noreferrer">
-                                <p>Click to play!</p>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="project-item">
-                            <img src="assets/icons/jipcad_icon.png" alt="CAD Icon" class="icon">
-                        
-                            <div class="details">
-                                <a href="https://github.com/JIPCAD/JIPCAD" target="_blank">
-                                    <strong>Contributions to NOME / JIPCAD:</strong>
-                                </a>
-                                <p>
-                                    Created a custom VSCode extension for the NOME programming language. Designed knot structures and implemented shelling, merging, offsetting, and color-changing features for this open-sourced 3D-CAD software.
-                                </p>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <p>Here are some customized tools I built:</p>
-                <div class="horizontal-items">
-                    <div class="item">
-                        <a href="https://zhenga1.github.io/gesturedetectorweb/" target="_blank" style="text-decoration: none;">
-                        <h4>Gesture Detector</h4>
-                        <p>
-                            A Handpose Detector made using tensorflow, with react as the frontend. Will detect and show the relevant handpose done by the user through an emoji format.
-                        </p>
-                        </a>
-                    </div>
-                    <div class="item">
-                        <a href="https://github.com/zhenga1/writeeasy" target="_blank" style="text-decoration: none;">
-                        <h4>Write Easy</h4>
-                        <p>
-                            A Flask web app made using Cohere and python as backend that generates paragraphs of text, saving college student's time by helping them write application essays.
-                        </p>
-                        </a>
-                    </div>
+            <!-- TODO(aaron): replace the placeholder text in these cards with your own. -->
+            <div class="interest-grid">
+                <div class="interest accent-pink">
+                    <div class="interest-emoji">📚</div>
+                    <h4>Reading</h4>
+                    <p class="placeholder">Papers or books on your nightstand — e.g. something on robot learning, RL for LLMs, or a good sci-fi novel.</p>
+                </div>
+                <div class="interest accent-blue">
+                    <div class="interest-emoji">🧪</div>
+                    <h4>Currently exploring</h4>
+                    <p class="placeholder">Research directions you're curious about — e.g. VLA models, sim-to-real, world models, evals for AV behavior.</p>
+                </div>
+                <div class="interest accent-orange">
+                    <div class="interest-emoji">🏋️</div>
+                    <h4>Training</h4>
+                    <p class="placeholder">Current lifting split, a PR you're chasing, or a goal for this year.</p>
+                </div>
+                <div class="interest accent-green">
+                    <div class="interest-emoji">🥾</div>
+                    <h4>Favorite trails</h4>
+                    <p class="placeholder">Bay Area hikes you'd recommend — Mission Peak? Mt. Tam? Your call.</p>
+                </div>
+                <div class="interest accent-violet">
+                    <div class="interest-emoji">🎮</div>
+                    <h4>Playing</h4>
+                    <p class="placeholder">Games in your rotation right now.</p>
+                </div>
+                <div class="interest accent-teal">
+                    <div class="interest-emoji">🍵</div>
+                    <h4>Tea order</h4>
+                    <p class="placeholder">Your go-to drink for those tea chats.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-
-   <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="experience-timeline">
-                <div class="experience-item">
-                    <div class="year">2026</div>
-                    <div class="details">
-                        <h3>Software Engineer - Autonomy - Behavior Evaluation</h3>
-                        <p><strong>Nuro</strong></p>
-                        <p>
-                            Building data cleaning, preprocessing, and analysis pipelines
-                            Productionizing model-based approaches for evaluating autonomous vehicle behavior.
-                        </p>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="year">2025-2026</div>
-                    <div class="details">
-                        <h3>Researcher</h3>
-                        <p><strong>Berkeley Sky Computing Lab -- SkyRL</strong></p>
-                        <p>
-                            Built solutions for merging sharded FSDP model tensors within each RL training checkpoint into a `.safetensors` file
-
-                            Integrated SkyRL-train into rLLM as a supported backend trainer through a new API. 
-                        </p>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="year">2024-2025</div>
-                    <div class="details">
-                        <h3>AI Scientist</h3>
-                        <p><strong>Uniphore</strong></p>
-                        <p>
-                            Developed AI safety methodologies, including novel guardrail models. 
-                            <br/>
-                            Developed versatile topic classifiers. 
-                        </p>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="year">2023 - 2024</div>
-                    <div class="details">
-                        <h3>Peer Leadership Consultant</h3>
-                        <p><strong>UC Berkeley Organizational Advising Student Involvement Services</strong></p>
-                        <p>
-                            Processed official registration of student orgs and their signatories on campus. 
-                            <br/>
-                            Front desk staffing to answer questions from student orgs.
-                            <br/>
-                            Worked on designing new training website for signatories with colleagues.
-                        </p>
-                    </div>
-                </div>
-                <div class="experience-item">
-                    <div class="year">2023</div>
-                    <div class="details">
-                        <h3>Language Engineering Intern</h3>
-                        <p><strong>Ivoyant</strong></p>
-                        <p>
-                            Built and debugged parser and language models to analyze JSON files with user data. 
-                            <br/>
-                            Developed functionalities for data mapping app, allowing it to map source and target schemas based on parsed user-input expressions
-                        </p>
-                    </div>
+        <!-- Contact CTA -->
+        <section class="section container">
+            <div class="cta">
+                <h2>Let's chat over tea 🍵</h2>
+                <p>Robotics, LLMs, graphics, or a good hiking trail — I'm always happy to talk.</p>
+                <div class="hero-actions center">
+                    <a class="btn btn-light" href="mailto:aaronz@berkeley.edu">aaronz@berkeley.edu</a>
+                    <a class="btn btn-outline-light" href="https://calendly.com/aaronhaowenzheng/new-meeting" target="_blank">Schedule a meeting ↗</a>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Academic Section -->
-    <section id="academic" class="section section-alt">
-        <div class="container">
-            <h2>Academics</h2>
-            <ul class="academic-list">
-                <li>
-                    <a href="assets/UCB_CS182_Report.pdf">
-                        Deep Neural Networks
-                    </a>
-                </li>
-                <li>
-                    <a href="assets/EECS_151_Project_Report_Final (1).pdf">
-                        Digital Design + Integrated Circuits
-                    </a>
-                </li>
-                <li>
-                    <a href="https://zhenga1.github.io/" target="_blank">
-                        Computer Vision
-                    </a>
-                </li>
-                <li>
-                    <a href="https://sylviacx.github.io/cs184-final-project/FinalReport/index.html" target="_blank">
-                        Computer Graphics
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    
+        </section>
+    </main>
 
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 Aaron Zheng. All rights reserved.</p>
+    <footer class="footer container">
+        <p>© <span id="year">2026</span> Aaron Zheng · Built by hand, powered by tea.</p>
+        <div class="footer-links">
+            <a href="https://github.com/zhenga1" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/aaronhzheng/" target="_blank">LinkedIn</a>
+            <a href="mailto:aaronz@berkeley.edu">Email</a>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        document.getElementById('theme-toggle').addEventListener('click', function () {
+            var root = document.documentElement;
+            var current = root.getAttribute('data-theme') ||
+                (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+            var next = current === 'dark' ? 'light' : 'dark';
+            root.setAttribute('data-theme', next);
+            try { localStorage.setItem('theme', next); } catch (e) {}
+        });
+
+        // Fade sections in as they scroll into view
+        if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+                });
+            }, { threshold: 0.08 });
+            document.querySelectorAll('.section').forEach(function (s) {
+                s.classList.add('reveal');
+                io.observe(s);
+            });
+        }
+    </script>
 </body>
 </html>
